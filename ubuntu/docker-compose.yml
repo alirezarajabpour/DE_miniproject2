@@ -1,0 +1,14 @@
+version: '3'
+services:
+  ubuntu:
+    image: ubuntu:latest
+    container_name: ubuntu
+    volumes:
+      - ./code:/home/projects
+    command: tail -f /dev/null
+    networks:
+      - services
+
+networks:
+  services:
+    external: true
