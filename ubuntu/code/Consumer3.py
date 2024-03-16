@@ -26,11 +26,11 @@ class UserInfo(Base):
     label = Column(String)
 
 def store_data_in_postgres(data):
-    db_host = 'root_db'
+    db_host = 'postgres'
     db_port = '5432'
-    db_name = 'root_db'
+    db_name = 'dblab'
     db_user = 'postgres'
-    db_password = 'password'
+    db_password = 'postgres123'
 
     try:
         engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}')
